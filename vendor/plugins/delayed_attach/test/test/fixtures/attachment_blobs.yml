@@ -1,0 +1,18 @@
+<%
+def fixture_data(name)
+  fn = File.join(Fixtures::FILE_STORE, name)
+  data = File.open(fn,'rb').read
+  "!binary |\n    #{[data].pack('m').split("\n").join("\n    ")}\n"
+end
+%>
+
+one:
+  blob: <%= fixture_data('rails.png') %>
+one_thumb:
+  blob: <%= fixture_data('rails.png') %>
+two:
+  blob: <%= fixture_data('AlexOnBMW#4.jpg') %>
+sss:
+  blob: <%= fixture_data('SperrySlantStar.bmp') %>
+unknown:
+  blob: " "

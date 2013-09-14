@@ -1,0 +1,20 @@
+development: &defaults
+  adapter: postgresql
+  encoding: unicode
+  database: attachment_development
+  pool: 5
+  username: enbake
+  password: admin
+  host: localhost
+
+test:
+  <<: *defaults
+  database: attachment_test
+
+staging:
+  <<: *defaults
+  database: attachment_core
+
+production:
+  <<: *defaults
+  database: attachment_production
