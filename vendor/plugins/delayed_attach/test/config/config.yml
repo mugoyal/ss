@@ -1,5 +1,0 @@
-production: &defaults
-development:
-  <<: *defaults
-test:
-  <<: *defaults
